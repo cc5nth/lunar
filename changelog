@@ -1,0 +1,38 @@
+lunar (2.4) unstable; urgency=low
+
+  * Clean up the code.
+  * Remove the GB and Big5 support.
+  * Use getopt to parse the arguments.
+  * New feature: display the calendar by month.
+
+ -- Ken CC <ken.ccao@gmail.com>  Fri, 06 Jan 2012 10:50:29 +0800
+
+lunar (2.2-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * FIX: lunar-2.2 wrong output on year 2033 (Closes: #366918)
+
+ -- LI Daobing <lidaobing@gmail.com>  Sun, 05 Oct 2008 20:02:16 +0800
+
+lunar (2.2-3) unstable; urgency=low
+
+  * Added --utf8 option.  (Closes: Bug#288170)
+  * Updated Standards-Version: 3.6.2
+  * [lunar.c]: Added "#include <stdlib.h>" to remove compiler warnings.
+
+ -- Anthony Fok <foka@debian.org>  Wed,  4 Jan 2006 20:32:25 +0800
+
+lunar (2.2-2) unstable; urgency=medium
+
+  * Oops, I forgot to install lunar.bitmap and to specify its full path
+    in the source code!  Many thanks to Jeronimo Pellegrini for providing
+    the patch to fix the problem.  (Closes: Bug#162634)
+
+ -- Anthony Fok <foka@debian.org>  Sat, 19 Oct 2002 02:00:36 +0800
+
+lunar (2.2-1) unstable; urgency=low
+
+  * Initial Release.
+  * Added Big5 output in addition to the original Hanzi (GB) output.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 22 Sep 2002 14:54:09 +0800

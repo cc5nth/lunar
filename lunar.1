@@ -1,0 +1,102 @@
+.TH lunar 1 "28 October 2001"
+.SH NAME
+lunar (version 2.2) \- a calendar conversion utility
+.SH SYNTAX
+.B lunar
+[
+.B \-h
+] [
+.B \-b
+] [
+.B \-i
+] [
+.B \-l
+]
+.I year month day
+[
+.I hour
+]
+.SH DESCRIPTION
+The
+.PN lunar
+program performs date conversion between the Gregorian Solar Calendar (SC)
+and the Chinese Lunar Calendar (LC).
+Given a date in either calendar, the program also
+outputs the corresponding "shengxiao" (animal of the year)
+and "ganzhi" characters.
+The date range currently covered is from about 1900 A.D. to 2049 A.D.
+.PP
+For the sake of convenience, we choose the convention such that the solar 
+and lunar year numbers of the first day of a lunar year are the same.
+For example, SC 1991.2.15 is LC 1991.1.1,
+while SC 1991.2.14 is LC 1990.12.30.
+Moreover, we choose the convention such that the solar and lunar hour numbers
+(in 24-hour clock) of a date are the same, although a lunar day starts
+at 23:00 of a solar day. This means that SC 1991.2.15.23 is LC 1991.1.2.23,
+while SC 1991.2.16.0 is LC 1991.1.2.0,
+and SC 1991.2.16.1 is LC 1991.1.2.1.
+.PP
+The standard time of the Lunar Calendar is
+Beijing (Hong Kong) Standard Time, not GMT.
+Be sure to adjust appropriately for other time zones
+and "Daylight Saving Time".
+.PP
+In the Lunar Calendar,
+a normal year has 12 months, and a leap year (run-nian) has 13 months,
+where the extra month is called a "leap month" (run-yue).
+For example, the leap month that follows immediately the 6-th lunar month
+is called the 6-th leap month.
+A (leap) month is either a short or long one, which has 29 or 30 days
+respectively.
+.PP
+There are 10 gan's and 12 zhi's.
+The ganzhi labeling of the year, month, day and hour of a date
+is a member of the Cartesian product GxGxGxG, where G = {1,2,...,60}.
+For example, "jia-zi" is 1, "yi-chou" is 2, and so on.
+The ganzhi of the j-th leap month is the same as that of the j-th month.
+
+The possible options are
+.IP b
+output ganzhi in special "bitmap" characters.
+.IP h
+output hanzi or Chinese characters encoded in (highest-bit-set) GB code.
+.IP i
+convert a lunar date to solar date.
+The default is to convert a solar date to a lunar date.
+.IP l
+indicate the month is a lunar leap month.
+This option is meaningful only when the "-i" option is used.
+.SH COPYRIGHT
+Copyright (C) 1988, 1989, 1991, 1992, 2001 Fung F. Lee and Ricky Yeung 
+.sp
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+The last version of this program was released on July 23, 1992 as
+version 2.1a.  This program was first released under the terms of 
+GNU GPL on October 28, 2001 as version 2.2. Both versions are identical
+except for the license text.
+
+
+.SH AUTHORS
+Fung F. Lee and Ricky Yeung
+.SH ACKNOWLEDGEMENT
+The special "bitmap" file "lunar.bitmap" was contributed by Weimin Liu.
+
+Special thanks to Hwei Chen Ti who extended the tables from 2001 to 2049.
+.SH BUGS
+Bug reports and comments should be sent to lee@umunhum.stanford.edu.
+.SH DISCLAIMER
+This software has no connection with our employers.
+
